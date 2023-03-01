@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClienteControlador;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/novocliente', function () {
+Route::get('/novocliente', 'ClienteControlador@create');
     return view('novocliente');
-});
+Route::get('/','ClienteControlador@index');
