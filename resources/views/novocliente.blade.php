@@ -22,7 +22,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="idade">Idade do cliente</label>
-                                    <input type="number" id="idade" class="form-control" name ="idade" placeholder="Nome do cliente">
+                                    <input type="number" id="idade" class="form-control" name ="idade" placeholder="Idade do cliente">
                             </div>
                             <div class="form-group">
                                 <label for="endereco">Endereço do cliente</label>
