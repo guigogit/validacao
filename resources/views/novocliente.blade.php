@@ -16,6 +16,7 @@
                     </div>
                     <div class="card-body">
                         <form action="/cliente" method="post">
+                            @csrf
                             <div class="form-group">
                                 <label for="nome">Nome do cliente</label>
                                     <input type="text" id="nome" class="form-control" name ="nome" placeholder="Nome do cliente">
