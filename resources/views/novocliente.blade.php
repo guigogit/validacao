@@ -40,10 +40,24 @@
                             <button type="cancel" class="btn btn-primary btn-sm">Cancelar</button>
                         </form>
                     </div>
+                    @if($errors->any())
+                        <div class="card-footer">
+                            <!-- Foreach feito para percorrer todos os campos atrás de erro.
+                            Caso algum campo esteja vazio, será printado na tela uma mensagem falando que o campo é requerido -->
+                            @foreach ($errors ->all() as $error)
+                                <div class="alert alert-danger" role ="alert">
+                                    {{ $error}}
+                                </div>
+                            @endforeach
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
     </main>
+    @if (isset($errors)) <!-- Caso algum campo esteja vazio, será printado na tela uma mensagem falando que o campo é requerido -->
+        {{var_dump($errors)}}
+    @endif
     <script src="{{asset('js/app.js')}}"type="text/javascript">  </script>
 </body>
 
