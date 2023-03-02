@@ -28,6 +28,12 @@ class ClienteControlador extends Controller
      */
     public function store(Request $request)
     {
+        // Função usada para validar se o campo está preenchido, caso o campo está fazio o código para de ser executado, assim não
+        // é exibido mensagem de erro para o usuário.
+        $request ->validate([
+            'nome'=> 'required|'
+        ]);
+
         $cliente = new Cliente();
         $cliente->nome = $request->input('nome');
         $cliente->idade = $request->input('idade');
