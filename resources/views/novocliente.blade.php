@@ -3,6 +3,9 @@
     <title>Cadastro de Cliente</title>
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <meta name="csrf-token" content="{{csrf_token()}}">
+    <style>
+        body { padding: 20px;}
+    </style>
 </head>
 <body>
     <main role="main">
@@ -15,7 +18,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form action="/cliente" method="post">
+                        <form action="/cliente" method="POST">
                             @csrf
                             <div class="form-group">
                                 <label for="nome">Nome do cliente</label>
@@ -34,7 +37,7 @@
                                     <input type="text" id="email" class="form-control" name ="email" placeholder="E-mail do cliente">
                             </div>
                             <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
-                            <button type="cancel" class="btn btn-primary btn-sm">Salvar</button>
+                            <button type="cancel" class="btn btn-primary btn-sm">Cancelar</button>
                         </form>
                     </div>
                 </div>

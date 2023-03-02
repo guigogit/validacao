@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/novocliente', 'ClienteControlador@create');
-    return view('novocliente');
-Route::get('/','ClienteControlador@index');
+Route::get('/novocliente', 'App\Http\Controllers\ClienteControlador@create');
+Route::get('/','App\Http\Controllers\ClienteControlador@index');
+Route::POST('/cliente','App\Http\Controllers\ClienteControlador@store'); // Rota para salvar o novo cliente
+

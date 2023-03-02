@@ -26,7 +26,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($cliente as $c)
+                                @foreach($clientes as $c) <!--A variável $clientes foi criada no meu controlador ClienteControlador.php
+                                na função index e ela está sendo passada no return dentro do compact -->
                                 <tr>
                                     <td>{{$c->id}}</td>
                                     <td>{{$c->nome}}</td>
